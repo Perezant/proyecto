@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contacto</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+            body{
+    margin-top:20px;
+    background:#eee;
+}
+.gradient-brand-color {
+    background-image: -webkit-linear-gradient(0deg, #376be6 0%, #6470ef 100%);
+    background-image: -ms-linear-gradient(0deg, #376be6 0%, #6470ef 100%);
+    color: #fff;
+}
+.contact-info__wrapper {
+    overflow: hidden;
+    border-radius: .625rem .625rem 0 0
+}
+
+@media (min-width: 1024px) {
+    .contact-info__wrapper {
+        border-radius: 0 .625rem .625rem 0;
+        padding: 5rem !important
+    }
+}
+.contact-info__list span.position-absolute {
+    left: 0
+}
+.z-index-101 {
+    z-index: 101;
+}
+.list-style--none {
+    list-style: none;
+}
+.contact__wrapper {
+    background-color: #fff;
+    border-radius: 0 0 .625rem .625rem
+}
+
+@media (min-width: 1024px) {
+    .contact__wrapper {
+        border-radius: .625rem 0 .625rem .625rem
+    }
+}
+@media (min-width: 1024px) {
+    .contact-form__wrapper {
+        padding: 5rem !important
+    }
+}
+.shadow-lg, .shadow-lg--on-hover:hover {
+    box-shadow: 0 1rem 3rem rgba(132,138,163,0.1) !important;
+}
+
+
+
+
+
+
+ /* Estilos generales */
+ body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Estilos del navbar */
+    .navbar {
+        background-color: #333; /* Color de fondo */
+        overflow: hidden; /* Para que los elementos floten correctamente */
+    }
+    
+    .navbar a {
+        float: left; /* Hacer que los elementos se alineen horizontalmente */
+        display: block; /* Para que los elementos se comporten como bloques */
+        color: white; /* Color del texto */
+        text-align: center; /* Alinear el texto al centro */
+        padding: 14px 20px; /* Espaciado interno */
+        text-decoration: none; /* Quitar subrayado */
+    }
+    
+    .navbar a:hover {
+        background-color: #ddd; /* Cambiar color de fondo al pasar el mouse */
+        color: black; /* Cambiar color del texto al pasar el mouse */
+    }
+    
+    .navbar a.active {
+        background-color: #04AA6D; /* Color de fondo del elemento activo */
+        color: white; /* Color del texto del elemento activo */
+    }
+    
+    /* Estilos para hacer el navbar responsive */
+    .navbar a:not(:first-child) {
+        display: none; /* Ocultar elementos que no sean el primer hijo (el primer enlace) */
+    }
+    
+    .navbar a.icon {
+        float: right; /* Hacer flotar el ícono a la derecha */
+        display: block; /* Hacer que el ícono sea un bloque */
+    }
+    
+    @media screen and (max-width: 600px) {
+        .navbar a:not(:first-child) {
+            display: none; /* Ocultar elementos que no sean el primer hijo en pantallas pequeñas */
+        }
+        .navbar a.icon {
+            float: right; /* Hacer flotar el ícono a la derecha */
+            display: block; /* Hacer que el ícono sea un bloque */
+        }
+        .navbar.responsive a {
+            float: none; /* Revertir la flotación */
+            display: block; /* Mostrar los elementos como bloques */
+            text-align: left; /* Alinear el texto a la izquierda */
+        }
+    }
+    </style>
+</head>
+<body>
+    
+<div class="navbar" id="myNavbar">
+    <a href="http://localhost:3000/" class="active">Inicio</a>
+    <a href="#">Acerca de</a>
+    <a href="#">Servicios</a>
+    <a href="#">Contacto</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+        <!-- Ícono del menú -->
+        <i class="fa fa-bars"></i>
+    </a>
+</div>
+
+<br><br>
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
+	<div class="container">
+		<div class="contact__wrapper shadow-lg mt-n9">
+			<div class="row no-gutters">
+				<div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
+					<h3 class="color--white mb-5">CONTACTO</h3>
+		
+					<ul class="contact-info__list list-style--none position-relative z-index-101">
+						<li class="mb-4 pl-4">
+							<span class="position-absolute"><i class="fas fa-envelope"></i></span> soporte@unach.mx
+						</li>
+						<li class="mb-4 pl-4">
+							<span class="position-absolute"><i class="fas fa-phone"></i></span> (961)-191-0875
+						</li>
+						<li class="mb-4 pl-4">
+							<span class="position-absolute"><i class="fas fa-map-marker-alt"></i></span> Sistemas Computacionales
+							<br> Blvd. Belisario Domínguez Km. 1081
+							<br> Terán, 29050 Tuxtla Gutiérrez, Chis.
+		
+							<div class="mt-3">
+								<a href="https://www.google.com/maps" target="_blank" class="text-link link--right-icon text-white">Dirección <i class="link__icon fa fa-directions"></i></a>
+							</div>
+						</li>
+					</ul>
+		
+					<figure class="figure position-absolute m-0 opacity-06 z-index-100" style="bottom:0; right: 10px">
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="444px" height="626px">
+							<defs>
+								<linearGradient id="PSgrad_1" x1="0%" x2="81.915%" y1="57.358%" y2="0%">
+									<stop offset="0%" stop-color="green" stop-opacity="1"></stop>
+									<stop offset="100%" stop-color="green" stop-opacity="0"></stop>
+								</linearGradient>
+							</defs>
+							<path fill-rule="evenodd" opacity="0.302" fill="green" d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z"></path>
+							<path fill="url(#PSgrad_1)" d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z"></path>
+						</svg>
+					</figure>
+				</div>
+		
+				<div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+					<form id="contact-form" action="/validar" class="contact-form form-validate" method="POST" novalidate="novalidate">
+						<div class="row">
+							<div class="col-sm-6 mb-3">
+								<div class="form-group">
+									<label class="required-field" for="firstName">Nombre</label>
+									<input type="text" class="form-control" id="nombre" name="nombre" required >
+								</div>
+							</div>
+		
+							<div class="col-sm-6 mb-3">
+								<div class="form-group">
+									<label for="lastName">Email (Gmail):</label>
+									<input class="form-control" type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@gmail\.com$">
+									<div id="email-error" class="text-danger"></div> <!-- Agregamos un espacio para mostrar errores de email -->
+								</div>
+							</div>
+		
+							<div class="col-sm-6 mb-3">
+                                <div class="form-group">
+                                    <label class="required-field" for="telefono">Telefono</label>
+                                    <input class="form-control" type="tel" id="telefono" name="telefono" maxlength="10" placeholder="(961)-000-0000" oninput="validarTelefono(this)">
+                                    <div id="telefono-error" class="text-danger"></div>
+                                </div>
+                            </div>
+		
+							<div class="col-sm-12 mb-3">
+								<div class="form-group">
+									<label class="required-field" for="message">Descripcion</label>
+									<textarea class="form-control" id="descripcion" name="descripcion" rows="4" required placeholder="Hola, escribe tu mensaje aqui....."></textarea>
+								</div>
+							</div>
+		
+							<div class="col-sm-12 mb-3">
+								<button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+							</div>
+							<div id="mensaje-guardado" style="display: none;">Guardado exitosamente.</div> <!-- Mensaje de guardado -->
+						</div>
+					</form>
+				</div>
+		
+			</div>
+		</div>
+	</div>
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const emailInput = document.getElementById("email");
+    const telefonoInput = document.getElementById("telefono");
+    const emailError = document.getElementById("email-error");
+    const telefonoError = document.getElementById("telefono-error");
+    const contactForm = document.getElementById("contact-form");
+    const mensajeGuardado = document.getElementById("mensaje-guardado");
+
+    contactForm.addEventListener("submit", function (event) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        if (!emailPattern.test(emailInput.value)) {
+            event.preventDefault();
+            emailError.textContent = "El email debe ser de Gmail";
+        } else {
+            emailError.textContent = "";
+        }
+
+        const telefonoValue = telefonoInput.value.replace(/\D/g, "").slice(0, 10);
+        telefonoInput.value = telefonoValue;
+        if (telefonoInput.value.length !== 10) {
+            event.preventDefault();
+            telefonoError.textContent = "El teléfono debe tener 10 números";
+        } else {
+            telefonoError.textContent = "";
+        }
+
+        
+        if (!emailError.textContent && !telefonoError.textContent) {
+                    // Aquí se enviaría el formulario (simulado)
+                    // Puedes agregar código para enviar el formulario a tu servidor si lo deseas
+                    // Simplemente mostraremos el mensaje de guardado aquí
+                    mensajeGuardado.style.display = "block";
+                    setTimeout(function () {
+                        mensajeGuardado.style.display = "none";
+                        contactForm.reset(); // Limpiar los campos del formulario
+                        contactForm.style.display = "none"; // Ocultar el formulario
+                        setTimeout(function () {
+                            contactForm.style.display = "block"; // Volver a mostrar el formulario después de 1 segundo
+                        }, 1000);
+                    }, 3000); // Ocultar el mensaje después de 3 segundos
+                }
+    });
+});
+
+
+    // Función para mostrar/ocultar el navbar en pantallas pequeñas
+    function toggleNavbar() {
+        var x = document.getElementById("myNavbar");
+        if (x.className === "navbar") {
+            x.className += " responsive";
+        } else {
+            x.className = "navbar";
+        }
+    }
+
+    </script>
+    <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
